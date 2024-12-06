@@ -3,6 +3,7 @@ package task3;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -13,8 +14,7 @@ public class BrandFetchReader {
     public String BRAND_FETCH_URL = "https://api.brandfetch.io/v2/brands/";
     public String API_KEY = "";
 
-    @SneakyThrows
-    public Company fetch(String companyName) {
+    public Company fetch(String companyName) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()

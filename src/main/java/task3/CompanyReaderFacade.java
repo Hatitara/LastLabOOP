@@ -2,8 +2,8 @@ package task3;
 
 public class CompanyReaderFacade {
 
-    private PDLReader reader1;
-    private BrandFetchReader reader2;
+    PDLReader reader1;
+    BrandFetchReader reader2;
 
     public CompanyReaderFacade() {
         reader1 = new PDLReader();
@@ -29,7 +29,7 @@ public class CompanyReaderFacade {
         return mergeCompanies(company1, company2);
     }
 
-    private Company mergeCompanies(Company company1, Company company2) {
+    Company mergeCompanies(Company company1, Company company2) {
         Company result = new Company();
 
         result.setName(

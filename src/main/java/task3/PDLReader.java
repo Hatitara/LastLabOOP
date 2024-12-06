@@ -12,8 +12,8 @@ import java.util.Scanner;
 
 
 public class PDLReader {
-    @SneakyThrows
-    public Company fetch(String companyName) {
+
+    public Company fetch(String companyName) throws IOException{
         String API_KEY = ""; // Key needs to be passed here.
         URL url = new URL("https://api.peopledatalabs.com/v5/company/enrich?website=ucu.edu.ua");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
